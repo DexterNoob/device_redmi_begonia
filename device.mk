@@ -298,6 +298,33 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6785.rc \
+    init.mt6785.power.rc \
+    init.mt6785.usb.rc \
+    init.project.rc \
+    init.sensor_1_0.rc \
+    fstab.mt6785 \
+    fstab.mt6785_ramdisk \
+    ueventd.mt6785.rc
+
+# Runtime Resource (RRO) Overlays
+PRODUCT_PACKAGES += \
+    ApertureOverlayBegonia \
+    BluetoothOverlayBegonia \
+    CarrierConfigOverlayBegonia \
+    FrameworksResOverlayBegonia \
+    SettingsOverlayBegonia \
+    SettingsLibOverlayBegonia \
+    SettingsProviderOverlayBegonia \
+    SystemUIOverlayBegonia \
+    TelephonyOverlayBegonia \
+    TetheringConfigOverlayBegonia \
+    WifiResOverlayBegonia
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
@@ -434,3 +461,7 @@ PRODUCT_PACKAGES += \
 
 # Inherit vendor
 $(call inherit-product, vendor/redmi/begonia/begonia-vendor.mk)
+
+# Custom packages
+PRODUCT_PACKAGES += \
+    Spectrum
