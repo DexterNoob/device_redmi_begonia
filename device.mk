@@ -361,8 +361,8 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     fstab.mt6785 \
     fstab.mt6785_ramdisk \
-    ueventd.mt6785.rc    \
-    init.xiaomi_parts.rc 
+    ueventd.mt6785.rc
+
 # Runtime Resource (RRO) Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayBegonia \
@@ -479,6 +479,10 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
+
+# Custom packages
+PRODUCT_PACKAGES += \
+    Spectrum
 
 # Inherit vendor
 $(call inherit-product, vendor/xiaomi/begonia/begonia-vendor.mk)
