@@ -85,13 +85,6 @@ void load_dalvik_properties() {
         property_override("dalvik.vm.heapmaxfree", "32m");
     }
 }
-void load_begonia() {
-    property_override("bluetooth.device.default_name", "Redmi Note 8 Pro");
-    property_override("ro.build.fingerprint", "Redmi/begonia_eea/begonia:11/RP1A.200720.011/V12.5.15.0.RGGEUXM:user/release-keys");
-    property_override("ro.vendor.build.fingerprint", "Redmi/begonia_eea/begonia:11/RP1A.200720.011/V12.5.15.0.RGGEUXM:user/release-keys");
-    property_override("ro.bootimage.build.fingerprint", "Redmi/begonia_eea/begonia:11/RP1A.200720.011/V12.5.15.0.RGGEUXM:user/release-keys");
-    property_override("ro.build.description", "Redmi/begonia_eea/begonia:11/RP1A.200720.011/V12.5.15.0.RGGEUXM:user/release-keys");
-}
 void vendor_load_properties() {
     load_device_properties();
     load_dalvik_properties();
