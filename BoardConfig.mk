@@ -69,10 +69,9 @@ TARGET_KERNEL_CONFIG := begonia_user_defconfig
 TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1 LLVM_IAS=1 AS=llvm-as AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
 TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 KERNEL_LD := LD=ld.lld
-TARGET_KERNEL_BUILD_USER := noob
-TARGET_KERNEL_BUILD_HOST := EreN
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := neutron
+TARGET_KERNEL_CLANG_VERSION := phoenix
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
