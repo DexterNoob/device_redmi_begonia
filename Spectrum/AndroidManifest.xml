@@ -21,7 +21,7 @@
             android:name=".SplashActivity"
             android:theme="@style/Splash.ActivityTheme"
             android:screenOrientation="portrait"
-            android:exported="false"> 
+            android:exported="true"> 
              <intent-filter>
                  <action android:name="android.intent.action.MAIN"/>
                  <category android:name="android.intent.category.LAUNCHER" />
@@ -32,7 +32,7 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            android:exported="false"> 
+            android:exported="true"> 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -42,14 +42,14 @@
         <activity
             android:name=".ProfileLoaderActivity"
             android:screenOrientation="portrait"
-            android:exported="false"> 
+            android:exported="true"> 
         </activity>
 
         <!-- Boot Receiver -->
         <receiver
             android:name=".BootReceiver"
             android:enabled="true"
-            android:exported="false"> 
+            android:exported="true"> 
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -63,7 +63,7 @@
             android:icon="@drawable/atom"
             android:label="@string/profileTile"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="false"> 
+            android:exported="true"> 
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
