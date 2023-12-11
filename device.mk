@@ -361,8 +361,8 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     fstab.mt6785 \
     fstab.mt6785_ramdisk \
-    ueventd.mt6785.rc
-
+    ueventd.mt6785.rc    \
+    init.xiaomi_parts.rc 
 # Runtime Resource (RRO) Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayBegonia \
