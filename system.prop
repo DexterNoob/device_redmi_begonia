@@ -104,3 +104,6 @@ ro.zram.periodic_wb_delay_hours=24
 
 # DroidX
 ro.droidx.maintainer=Noobbeast
+
+# Spectrum
+spectrum.support=1
