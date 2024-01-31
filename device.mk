@@ -432,5 +432,9 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# Engineering mode
+PRODUCT_PACKAGES += \
+    libjni_shim
+
 # Inherit vendor
 $(call inherit-product, vendor/redmi/begonia/begonia-vendor.mk)
