@@ -15,4 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/voltage_begonia.mk
+    $(LOCAL_DIR)/banana_begonia.mk
+
+COMMON_LUNCH_CHOICES := \
+    $(foreach variant, user userdebug eng, banana_begonia-$(variant))
