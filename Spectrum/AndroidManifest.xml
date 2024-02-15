@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="org.frap129.spectrum" >
 
+    <!-- Permissions -->
     <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -14,41 +15,65 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+
+        <!-- Splash Activity -->
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Splash.ActivityTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:exported="true"> 
              <intent-filter>
                  <action android:name="android.intent.action.MAIN"/>
                  <category android:name="android.intent.category.LAUNCHER" />
              </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:screenOrientation="portrait" >
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"> 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProfileLoaderActivity" android:screenOrientation="portrait" />
-        <receiver android:name=".BootReceiver" android:enabled="true" android:exported="true">
+
+        <!-- Profile Loader Activity -->
+        <activity
+            android:name=".ProfileLoaderActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"> 
+        </activity>
+
+        <!-- Boot Receiver -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true"> 
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
+
+        <!-- Profile Tile Service -->
         <service
             android:name=".ProfileTile"
             android:enabled="true"
             android:icon="@drawable/atom"
             android:label="@string/profileTile"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true"> 
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+
+        <!-- MultiProcessSharedPreferencesProvider -->
         <provider
             android:name="com.ruesga.preferences.MultiProcessSharedPreferencesProvider"
             android:authorities="com.android.providers"
-            android:exported="false"/>
+            android:exported="false"/> 
     </application>
 
 </manifest>
