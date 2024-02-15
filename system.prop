@@ -69,3 +69,6 @@ ro.zygote.preload.enable=0
 
 # DroidX
 ro.droidx.maintainer=Noobbeast
+
+# Spectrum
+spectrum.support=1
